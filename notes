@@ -1,0 +1,85 @@
+1:-What is Spring Framework? 
+Ans:-It is a loosely coupled and integrated framework for developing java applications smoothly.
+
+2:-What are the advantages of Spring Framework?
+Ans:-a:(Predefined Templates)--Spring framework provides templates for JDBC, Hibernate, JPA etc. technologies. So there is no need to write too much code.
+       It hides the basic steps of these technologies.
+     b:(Loose coupling)--The Spring applications are loosely coupled because of dependency injection.
+     c:(Easy to test)--The Dependency Injection makes easier to test the application. 
+       The Struts application require server to run the application but Spring framework doesn't require server.
+     d:(Lightweight)--Spring framework is lightweight because of its POJO implementation.
+       The Spring Framework doesn't force the programmer to inherit any class or implement any interface.
+       That is why it is said non-invasive.
+    e:(Fast Development)--The Dependency Injection feature of Spring Framework and it support to various frameworks makes the easy development of Java application.
+4:-What is Dependancy injection in spring?
+Ans:-this allows for loose coupling of objects and moves the responsibility of managing objects onto the container(IOC).
+
+5:-What are modules in Spring Framework? 
+Ans:-Test
+     Spring Core Container
+     AOP, Aspects and Instrumentation
+     Data Access/Integration
+     Web
+
+6:-What is IOC and DI?
+Ans:-IOC (Inversion of Control) and DI (Dependency Injection) is a design pattern to provide loose coupling. It removes the dependency from the program.
+
+7:-What is the role of IOC container in spring?
+Ans:-The IoC container is responsible to create, configure and assemble the objects. The IoC container gets informations from the XML file and works accordingly. 
+
+8:-What are the types of IOC container in spring?
+Ans:-BeanFactory
+     ApplicationContext
+
+9:What is the Difference between BeanFactory and the ApplicationContext?
+Ans:-The main difference is ApplicationContext It adds some extra functionality than BeanFactory such as simple integration with Spring's AOP,application layer specific context (e.g. WebApplicationContext) for web application. 
+     So it is better to use ApplicationContext than BeanFactory.
+     ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");  
+
+10:-What is Spring AOP? 
+Ans:-AOP (aspect-oriented programming) is a programming style that enables your application to be adaptable to changes such as logging,auditing,transactions,security,caching etc.
+
+11:-What is bean.xml? 
+Ans:-A bean is an object that is created, assembled, and managed by a Spring IoC container.
+
+12:-What is mean by Pojo? 
+Ans:-POJO in Java stands for Plain Old Java Object.
+     It is an ordinary object, which is not bound by any special restriction.
+     It increases the readability & re-usability of a Java program.
+     POJOs are now widely accepted due to their easy maintenance.
+     They are easy to read and write. A POJO class does not have any naming convention for properties and methods. 
+     It is not tied to any Java Framework; any Java Program can use it.
+
+13:-What is setter injection and constructor injection? 
+Ans:-Setter injection in Spring uses setter methods like setDependency() to inject dependency on any bean managed by Spring's IOC container.
+     Constructor injection uses the constructor to inject dependency on any Spring-managed bean.
+
+14:-What is the use of xsd in beans.xml file? 
+Ans:-It is used to validate the proper tag in a bean.xml file and to track the Schema loaction on internet or local classpath.
+
+15:- Constructor injection with dependent object?
+Amns:-If there is HAS-A relationship between the classes, we create the instance of dependent object (contained object) first then pass it as an argument of the main class constructor.
+
+16:Autowiring in Spring?
+Ans:-Autowiring feature of spring framework enables you to inject the object dependency implicitly.
+     It internally uses setter or constructor injection.
+     Autowiring can't be used to inject primitive and string values. It works with reference only.
+
+17:-Advantage of Autowiring?
+Ans:-It requires the less code because we don't need to write the code to inject the dependency explicitly.
+
+18:-Disadvantage of Autowiring?
+Ans:-No control of programmer,It can't be used for primitive and string values.
+
+19:-Autowiring Modes
+Ans:-   There are many autowiring modes:
+	no:-It is the default autowiring mode. It means no autowiring bydefault.
+	byName:-The byName mode injects the object dependency according to name of the bean. In such case, property name and bean name must be same. It internally calls setter method.
+	byType:-The byType mode injects the object dependency according to type. So property name and bean name can be different. It internally calls setter method.
+	constructor:-The constructor mode injects the dependency by calling the constructor of the class. It calls the constructor having large number of parameters.
+
+20:-Dependency Injection with Factory Method in Spring?
+Ans:-Spring framework provides facility to inject bean using factory method. To do so, we can use two attributes of bean element.
+     1:factory-method: represents the factory method that will be invoked to inject the bean.
+     2:factory-bean: represents the reference of the bean by which factory method will be invoked. It is used if factory method is non-static.
+     A method that returns instance of a class is called factory method.
